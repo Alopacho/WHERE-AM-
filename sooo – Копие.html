@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<img src="" id="image">
+<script src="jquery.js"></script>
+<script>
+bg = 0;
+let input = ['Landscape3.4.jpg', 'Landscape3.4.1.jpg','Landscape3.4.2.jpg','Landscape3.4.3.jpg'];
+let changed = document.getElementById('image');
+function Change()
+{
+
+ changed.src = input[bg];
+ if(input.length > bg+1){
+    bg++;
+  } 
+  }
+
+if(input.length > bg+1)
+{
+setInterval(Change,1000);
+}
+</script>
+</body>
+</html><OO

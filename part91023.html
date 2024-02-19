@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Landscape3?</title>
+<style>
+body {
+  background-image: url(Landscape3.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.popup {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  left:62%;
+  width: 4vw;
+  height: 4vw;
+  bottom: 2%;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+   text-align: left;
+ font-family: "Niagara Solid", Times, serif;
+ font-size: 2vw;
+  color: #c02c38;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.4vw;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 80%;
+  margin-left: -9vw;
+  padding-bottom:  0.5vw;
+  padding-top:  0.5vw;
+  padding-left:  0.5vw;
+  padding-right: -2vw;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+input
+{
+width: 12vw;
+height: 2vw;
+position: absolute;
+top: 30%;
+left: 44%; 
+ text-align: center;
+ font-family: "Niagara Solid", Times, serif;
+ font-size: 2vw;
+color: #c02c38;
+}
+.sub
+{
+width: 4vw;
+height: 2vw;
+position: absolute;
+top: 35%;
+font-size: 0.9vw;
+left: 48%; 
+}
+p
+{
+font-size: 3vw;
+color: #c02c38;
+letter-spacing: 0.2vw;
+font-family: "Niagara Solid", Times, serif;
+position: absolute;
+top: 17%;
+left: 39%; 
+}
+</style>
+</head>
+<body>
+<p>What is the answer now?</p>
+<input type="text" id="shit">
+<button class="sub" onclick="win()">Submit</button>
+<button class="popup" onclick="myFunction()">
+  <span class="popuptext" id="myPopup">Hi!!!<br>The answer is: Where am I?</span>
+</button>
+<script>
+function win()
+{
+ let x = document.getElementById("shit").value
+ if(x == "Where am I?")
+ {
+  window.location.href = "win.html";
+ }
+}
+</script>
+<script>
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+</body>
+</html>

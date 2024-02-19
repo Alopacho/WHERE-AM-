@@ -1,0 +1,72 @@
+<html>
+<head>
+<style>
+    body
+    {
+        background-image: url(Landscape4.jpg);
+        background-repeat: no-repeat;
+        background-size: 150cm;
+        background-color: black;
+        background-position-x: center;
+        filter: brightness(50%);
+    }
+    button
+    {
+        position: absolute;
+        left: 100cm;
+        top: 70cm;
+        width: 5vw;
+        height: 8vw;
+        background-color: transparent;
+        border: none;
+        visibility: hidden;
+    }
+    audio
+    {
+      visibility: hidden;
+    }
+</style>
+</head>
+<body onload = "Volumeup()">
+<button id="button" onclick="document.location='win....html'"></button>
+<audio controls autoplay>
+    <source src="track1.mp3" type="audio/mpeg" id="myaudio">
+  </audio>
+<script src="jquery.js"></script>
+<script>
+bg = 0;
+let cli = document.getElementById('button');
+function Change()
+{
+    if(bg%2==0)
+    {
+        cli.style.visibility = "visible";
+    document.body.style.backgroundImage = "url('Landscape4.1.jpg')";
+     bg++;
+    }
+    else
+    {
+        cli.style.visibility = "hidden";
+    document.body.style.backgroundImage = "url('Landscape4.jpg')";
+      bg--;
+    }
+    
+  }
+  setInterval(function()
+  {
+    Change();
+    setTimeout(Change,400);
+  }, 12000)
+  function Volumeup()
+  { let vid = document.getElementById("myaudio");
+  volum = 0;
+  function Myfunction(){
+      vid.volume = volum;
+      volum+=0,2;
+
+  }
+  SetInterval(Myfunction(),100)
+}
+</script>
+</body>
+</html><OO

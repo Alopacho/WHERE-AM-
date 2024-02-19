@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url(border.gif),url(Landscape3.4.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 150%,100%;
+}
+audio{
+  visibility: hidden;
+}
+</style>
+</head>
+<body>
+  <audio controls autoplay>
+    <source src="track3.mp3" type="audio/mpeg">
+  </audio>
+<script src="jquery.js"></script>
+<script>
+bg = 0;
+let input = ['Landscape3.4.jpg', 'Landscape3.4.1.jpg','Landscape3.4.2.jpg','Landscape3.4.3.jpg'];
+function Change()
+{
+
+ document.body.style.backgroundImage = input[bg];
+ if(input.length > bg+1){
+    bg++;
+  } 
+  }
+
+if(input.length > bg+1)
+{
+setInterval(Change,10);
+}
+</script>
+</body>
+</html><OO

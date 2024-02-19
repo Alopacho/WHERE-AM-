@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/021/775/079/non_2x/white-texture-of-paper-wallpaper-with-abstract-stains-plastered-embossed-wall-photo.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h1{
+line-height: 80%;
+font-size: 20vw;
+color: #851922;
+letter-spacing: -1vw;
+ margin-bottom:-5px;
+}
+a.uumm
+{
+font-size: 10vw;
+color: #851922;
+}
+a.secret
+{
+position: relative;
+left: 10000px;
+}
+audio
+    {
+      visibility: hidden;
+    }
+</style>
+</head>
+<body onload = "Volumeup()">
+<font face="Californian FB">
+<h1 align="center">YOU WON?</h1>
+<p align="center"><a class ="uumm" href ="javascript:delay('started.html')">Again?</a></p>
+</font>
+<audio controls autoplay>
+  <source src="track2.mp3" type="audio/mpeg" id="myaudio">
+</audio>
+<a class ="secret" href ="hm1.html">SECRET?</a>
+<script>
+  function Volumeup()
+  { let vid = document.getElementById("myaudio");
+  volum = 0;
+  function Myfunction(){
+      vid.volume = volum;
+      volum+=0,2;
+
+  }
+  SetInterval(Myfunction(),500)
+  }
+  function delay (URL) {
+    volum+=3.0;
+    setTimeout( function() { window.location = URL }, 2000 );
+}
+ 
+  </script>
+</body>
+</html>

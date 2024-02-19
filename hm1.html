@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/021/775/079/non_2x/white-texture-of-paper-wallpaper-with-abstract-stains-plastered-embossed-wall-photo.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+h1
+{
+font-size: 5vw;
+color: #c02c38;
+letter-spacing: 0.5vw;
+font-family: "Niagara Solid", Times, serif;
+line-height: 80%;
+}
+p
+{
+font-size: 3vw;
+color: #c02c38;
+letter-spacing: 0.5vw;
+font-family: "Niagara Solid", Times, serif;
+margin-top: -2vw;
+}
+input
+{
+width: 12vw;
+height: 2vw;
+position: absolute;
+top: 30%;
+left: 44%; 
+ text-align: center;
+ font-family: "Niagara Solid", Times, serif;
+ font-size: 2vw;
+color: #c02c38;
+}
+button
+{
+position: absolute;
+height: 2vw;
+width: 4vw;
+top: 35%;
+left: 48%;
+
+}
+.bomb
+{
+visibility: hidden;
+}
+.bomb .show
+{
+visibility: visible;
+}
+</style>
+</head>
+<body>
+<h1>So now<br>What is my favorite date?</h1>
+<p>please enter in format dd/mm/yy</p>
+<input type="text" id="shit">
+<button onclick="myFunction()">Submit</button>
+<img class = "bomb" id="myBomb" src="https://media3.giphy.com/media/3ohjUOUjEK1TXCQRva/giphy.gif">
+<script>
+function myFunction()
+{
+ let x = document.getElementById("shit").value
+ if(x == "09/10/23")
+ {
+  window.location.href = "https://docs.google.com/document/d/1byC9FBAHGFJY_AYiXw4jrhn4jRjLNCLZ/edit?usp=sharing&ouid=108820748322745831819&rtpof=true&sd=true";
+ } else if(x =="11/09/01")
+ {
+  var bomb = document.getElementById("myBomb");
+  bomb.toggle("show");
+ }
+}
+</script>
+
+</body>
+</html> 
